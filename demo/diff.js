@@ -35,15 +35,15 @@ function DiffHighlight() {
             style={docco}
             wrapLines={true}
             showLineNumbers={true}
-            lineStyle={lineNumber => {
-              let style = { display: 'block' };
+            lineProps={lineNumber => {
+              let props = { style: { display: 'block' }};
               if (ADDED.includes(lineNumber)) {
-                style.backgroundColor = '#dbffdb';
+                props.style.backgroundColor = '#dbffdb';
               }
               else if (REMOVED.includes(lineNumber)) {
-                style.backgroundColor = '#ffecec';
+                props.style.backgroundColor = '#ffecec';
               }
-              return style;
+              return props;
             }}
           >
             {CODE}
