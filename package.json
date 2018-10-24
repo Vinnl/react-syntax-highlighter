@@ -45,6 +45,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
+    "build-demo": "webpack -p",
     "build": "babel src --out-dir .",
     "watch": "babel src --watch --out-dir .",
     "build-styles-hljs": "node ./lib/build-stylesheets-highlightjs.js",
